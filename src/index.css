@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+    background-color: theme("colors.violet.700");
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input[type="checkbox"]:checked {
+    background-color: theme("colors.violet.400") !important;
+}
+
+input[type="checkbox"]:checked svg {
+    color: #fff !important;
+}
+
+input:disabled,
+button:disabled {
+    cursor: not-allowed;
+}
+
+a.active {
+    background-color: theme("colors.stone.100");
+}
+
+.dark a.active {
+    background-color: theme("colors.stone.900");
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none !important;
+}
+
+/*Spinner style*/
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #ddd;
+    border-bottom-color: theme("colors.violet.400");
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.slick-prev::Before, .slick-next::before{
+  color: theme("colors.violet.600");
+}
+
+.slick-slide{
+    margin: 0 10px;
+}
